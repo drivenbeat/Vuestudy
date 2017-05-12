@@ -1,0 +1,37 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" Content="text/html; charset=utf-8" />
+    <title>Hello Bootstrap</title>
+</head>
+<link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+<body>
+    <div class="container">
+        <h1>This is me!</h1>
+        <ul class="list-group">
+            <li v-for="(value, key, index) in me" class="list-group-item">
+                {{index}} : {{key}} :  {{value}}
+            </li>
+        </ul>
+        <pre>
+            {{ $data }}
+        </pre>
+    </div>
+    
+</body>
+<script src="/node_modules/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el : '.container',
+        data :  {
+           me: {
+                name: "jeongmin kim",
+                height: '179',
+                weight: 85,
+                eyecolor:'black',
+                food: 'everything'
+            }
+        }
+    })
+</script>
+
+</html>

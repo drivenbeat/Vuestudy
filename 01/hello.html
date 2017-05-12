@@ -2,7 +2,23 @@
 <head>
     <title>Hello Vue</title>
 </head>
+<link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
 <body>
-    <h1>Gretting your majesty</h1>
+    <div id="app">
+    <h1>{{ message }}</h1>
+    <input class="form-control" v-model="message">
 </body>
+<script src="/node_modules/vue/dist/vue.js"></script>
+<script>
+
+    var data = {
+        message: 'Greetings you Majesty!'
+    };
+
+    new Vue({
+        el : '#app',
+        data :  data
+    })
+</script>
+
 </html>
